@@ -1,0 +1,123 @@
+---
+- !ruby/struct:Entry
+  session_id: 3
+  name: ''
+  amount: 0
+  value: 5000
+  weight: 0.5
+  storage: ''
+  comment: 'Anzahlung Quest #2 - "Kurier Mühlenberge"'
+- !ruby/struct:Entry
+  session_id: 3
+  name: ''
+  amount: 0
+  value: -5000
+  weight: 0.5
+  storage: ''
+  comment: je 10gp an die Gruppenmitglieder verteilt
+- !ruby/struct:Entry
+  session_id: 3
+  name: ''
+  amount: 0
+  value: 14300
+  weight: 1.43
+  storage: Gwyn
+  comment: Direktfund 1. Kampf mit Goblins
+- !ruby/struct:Entry
+  session_id: 4
+  name: ''
+  amount: 0
+  value: 35000
+  weight: 3.5
+  storage: Gwyn
+  comment: Direktfund 2. Kampf mit Goblins und Myrdral
+- !ruby/struct:Entry
+  session_id: 4
+  name: Scoll of Identification
+  amount: 0
+  value: -11000
+  weight: 0
+  storage: direkt verwendet
+  comment: von BM in Tanne#Fähre gekauft und zur Identifikation des Erzmagierrings
+    verwendet
+- !ruby/struct:Entry
+  session_id: 5
+  name: ''
+  amount: 0
+  value: 10000
+  weight: 1.0
+  storage: Gwyn
+  comment: Verkauf des kompletten Loot aus den beiden Goblinkämpfen an Armin in Mühlenberge
+- !ruby/struct:Entry
+  session_id: 5
+  name: Service
+  amount: 0
+  value: -100
+  weight: 0
+  storage: ''
+  comment: Bezahlung des Händlers der uns und unseren verletzten Gefährten mitnimmt.
+- !ruby/struct:Entry
+  session_id: 5
+  name: Light Horse
+  amount: 1
+  value: -9000
+  weight: 0
+  storage: ''
+  comment: Leichtes Pferd und einen Transportsattel gekauft
+- !ruby/struct:Entry
+  session_id: 6
+  name: ''
+  amount: 0
+  value: 7500
+  weight: 0.75
+  storage: Gwyn
+  comment: 'Belohnung Qest #2 - "Kurier Mühlenberge"'
+- !ruby/struct:Entry
+  session_id: 6
+  name: Kost & Logis
+  amount: 0
+  value: -400
+  weight: 0
+  storage: ''
+  comment: ''
+- !ruby/struct:Entry
+  session_id: 6
+  name: Rations
+  amount: 0
+  value: -100
+  weight: 0
+  storage: ''
+  comment: ''
+- !ruby/struct:Entry
+  session_id: 7
+  name: Service
+  amount: 0
+  value: -5000
+  weight: 0
+  storage: ''
+  comment: Spende an den Tempel für den Versuch Tarsos Wunde zu heilen
+- !ruby/struct:Entry
+  session_id: 7
+  name: Service
+  amount: 0
+  value: -500
+  weight: 0
+  storage: ''
+  comment: Kurier beauftragt, den General über unser Vorhaben nach Süden zu gehen
+    zu informieren und unser Pferd nach Otternburg zu Gwyns Eltern zu bringen.
+- !ruby/struct:Entry
+  session_id: 7
+  name: Kost & Logis
+  amount: 0
+  value: -400
+  weight: 0
+  storage: ''
+  comment: ''
+- !ruby/struct:Entry
+  session_id: 7
+  name: Rations
+  amount: 0
+  value: -100
+  weight: 0
+  storage: ''
+  comment: ''
