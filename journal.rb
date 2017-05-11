@@ -20,11 +20,17 @@ class Coins
   attr_reader :silver
   attr_reader :copper
   def initialize(int)
+    pre = int < 0 ? -1 : 1
+    int = int.abs
+    
     @copperlings = int
 
     @gold, remaining_copperlings = copperlings.divmod(100)
+    @gold *= pre
     @silver, remaining_copperlings = remaining_copperlings.divmod(10)
+    @silver *= pre
     @copper = remaining_copperlings
+    @copper *= pre
   end
 
   # Math
@@ -129,7 +135,7 @@ class Journal
       html += "<tr><td>#{idx}</td>"
       entry.each_pair do |key,value|
         value = Coins.new(value) if key == :value
-        html += "<td>#{value.to_s}</td>"
+        html += "<td>#{value.to_s.empty? ? '-' : value.to_s}</td>"
       end
       html += "</tr>"
     end
@@ -163,10 +169,22 @@ j.load
 # j.append Entry.new 7, 'Service', 0, -5.gp, 0, '', 'Kurier beauftragt, den General über unser Vorhaben nach Süden zu gehen zu informieren und unser Pferd nach Otternburg zu Gwyns Eltern zu bringen.'
 # j.append Entry.new 7, 'Kost & Logis', 0, -4.gp, 0, '', ''
 # j.append Entry.new 7, 'Rations', 0, -1.gp, 0, '', ''
+# j.append Entry.new 8, 'Scale Mail', 1, -50.gp, 0, '', 'Rüstung für Tarso'
+# j.append Entry.new 8, 'Scale Mail', 1, -50.gp, 0, '', 'Rüstung für Eldgrimm'
+# j.append Entry.new 8, 'Bullseye Latern', 2, -24.gp, 0, '', 'Vorbereitung für Zwergenfestung'
+# j.append Entry.new 8, 'Chalk', 10, -1.sp, 0, '', 'Vorbereitung für Zwergenfestung'
+# j.append Entry.new 11, '', 0, 200.gp, 2.0, 'Gwyn', 'Direktfund Kampf mit Goblinoiden'
 
+puts "<html>"
+puts "<head>"
+puts "<meta charset='utf-8'/>"
+puts "</head>"
+puts "<body>"
 puts "<h1>Finanzbuchhaltung</h1>"
 puts "<h2>Aktueller Kontostand - #{j.current_coins}</h2>"
 puts "<h2>Aktuelles Transportgewicht - #{j.current_weight}</h2>"
 puts j.export_as_html(reverse: true) # Show latest first
+puts "</body>"
+puts "</html>"
 
 j.close

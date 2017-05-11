@@ -121,3 +121,43 @@
   weight: 0
   storage: ''
   comment: ''
+- !ruby/struct:Entry
+  session_id: 8
+  name: Scale Mail
+  amount: 1
+  value: -5000
+  weight: 0
+  storage: ''
+  comment: Rüstung für Tarso
+- !ruby/struct:Entry
+  session_id: 8
+  name: Scale Mail
+  amount: 1
+  value: -5000
+  weight: 0
+  storage: ''
+  comment: Rüstung für Eldgrimm
+- !ruby/struct:Entry
+  session_id: 8
+  name: Bullseye Latern
+  amount: 2
+  value: -2400
+  weight: 0
+  storage: ''
+  comment: Vorbereitung für Zwergenfestung
+- !ruby/struct:Entry
+  session_id: 8
+  name: Chalk
+  amount: 10
+  value: -10
+  weight: 0
+  storage: ''
+  comment: Vorbereitung für Zwergenfestung
+- !ruby/struct:Entry
+  session_id: 11
+  name: ''
+  amount: 0
+  value: 20000
+  weight: 2.0
+  storage: Gwyn
+  comment: Direktfund Kampf mit Goblinoiden
