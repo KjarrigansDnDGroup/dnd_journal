@@ -174,6 +174,15 @@ j.load
 # j.append Entry.new 8, 'Bullseye Latern', 2, -24.gp, 0, '', 'Vorbereitung für Zwergenfestung'
 # j.append Entry.new 8, 'Chalk', 10, -1.sp, 0, '', 'Vorbereitung für Zwergenfestung'
 # j.append Entry.new 11, '', 0, 200.gp, 2.0, 'Gwyn', 'Direktfund Kampf mit Goblinoiden'
+# j.append Entry.new 12, 'Kost & Logis', 0, -6.gp, 0, '', ''
+# j.append Entry.new 14, 'Kost & Logis', 0, -6.gp, 0, '', ''
+# j.append Entry.new 15, 'Kost & Logis', 0, -6.gp, 0, '', ''
+# j.append Entry.new 15, 'Thieves Tools', 0, 0.gp, 0, 'Talin', 'Bei zwei vermeintlichen Diebsleichen gefunden'
+# j.append Entry.new 15, '', 0, 20.gp, 0, '', 'In einem Geheimversteck in der Kanalisation'
+# j.append Entry.new 15, 'Valuable Carpet', 0, 0.gp, 0, 'Zaubersack', 'In einem Geheimversteck in der Kanalisation'
+# j.append Entry.new 16, 'Ink & 5x Parchment', 0, -9.gp, 0, 'Gwyn', 'Für die Zukunft...'
+# j.append Entry.new 16, '20x Arrow', 0, -1.gp, 0, 'Talin', ''
+# j.append Entry.new 16, 'Questbelohnung', 0, 120.gp, 0, '', '20g Boni wegen guter Dienste'
 
 puts "<html>"
 puts "<head>"

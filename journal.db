@@ -161,3 +161,75 @@
   weight: 2.0
   storage: Gwyn
   comment: Direktfund Kampf mit Goblinoiden
+- !ruby/struct:Entry
+  session_id: 12
+  name: Kost & Logis
+  amount: 0
+  value: -600
+  weight: 0
+  storage: ''
+  comment: ''
+- !ruby/struct:Entry
+  session_id: 14
+  name: Kost & Logis
+  amount: 0
+  value: -600
+  weight: 0
+  storage: ''
+  comment: ''
+- !ruby/struct:Entry
+  session_id: 15
+  name: Kost & Logis
+  amount: 0
+  value: -600
+  weight: 0
+  storage: ''
+  comment: ''
+- !ruby/struct:Entry
+  session_id: 15
+  name: Thieves Tools
+  amount: 0
+  value: 0
+  weight: 0
+  storage: Talin
+  comment: Bei zwei vermeintlichen Diebsleichen gefunden
+- !ruby/struct:Entry
+  session_id: 15
+  name: ''
+  amount: 0
+  value: 2000
+  weight: 0
+  storage: ''
+  comment: In einem Geheimversteck in der Kanalisation
+- !ruby/struct:Entry
+  session_id: 15
+  name: Valuable Carpet
+  amount: 0
+  value: 0
+  weight: 0
+  storage: Zaubersack
+  comment: In einem Geheimversteck in der Kanalisation
+- !ruby/struct:Entry
+  session_id: 16
+  name: Ink & 5x Parchment
+  amount: 0
+  value: -900
+  weight: 0
+  storage: Gwyn
+  comment: Für die Zukunft...
+- !ruby/struct:Entry
+  session_id: 16
+  name: 20x Arrow
+  amount: 0
+  value: -100
+  weight: 0
+  storage: Talin
+  comment: ''
+- !ruby/struct:Entry
+  session_id: 16
+  name: Questbelohnung
+  amount: 0
+  value: 12000
+  weight: 0
+  storage: ''
+  comment: 20g Boni wegen guter Dienste
