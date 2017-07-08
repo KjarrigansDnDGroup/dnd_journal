@@ -233,3 +233,19 @@
   weight: 0
   storage: ''
   comment: 20g Boni wegen guter Dienste
+- !ruby/struct:Entry
+  session_id: 17
+  name: Kost & Logis
+  amount: 0
+  value: -1000
+  weight: 0
+  storage: ''
+  comment: 1g / pro Nacht und Tag Logis, 5s / Nacht / Tag Kost
+- !ruby/struct:Entry
+  session_id: 17
+  name: Gather Information
+  amount: 0
+  value: -200
+  weight: 0
+  storage: ''
+  comment: Suche nach Gerhard Osterhagen

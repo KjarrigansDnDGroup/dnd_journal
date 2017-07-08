@@ -183,6 +183,8 @@ j.load
 # j.append Entry.new 16, 'Ink & 5x Parchment', 0, -9.gp, 0, 'Gwyn', 'Für die Zukunft...'
 # j.append Entry.new 16, '20x Arrow', 0, -1.gp, 0, 'Talin', ''
 # j.append Entry.new 16, 'Questbelohnung', 0, 120.gp, 0, '', '20g Boni wegen guter Dienste'
+j.append Entry.new 17, 'Kost & Logis', 0, -10.gp, 0, '', '1g / pro Nacht und Tag Logis, 5s / Nacht / Tag Kost'
+j.append Entry.new 17, 'Gather Information', 0, -2.gp, 0, '', 'Suche nach Gerhard Osterhagen'
 
 puts "<html>"
 puts "<head>"
