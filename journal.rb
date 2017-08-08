@@ -183,8 +183,18 @@ j.load
 # j.append Entry.new 16, 'Ink & 5x Parchment', 0, -9.gp, 0, 'Gwyn', 'Für die Zukunft...'
 # j.append Entry.new 16, '20x Arrow', 0, -1.gp, 0, 'Talin', ''
 # j.append Entry.new 16, 'Questbelohnung', 0, 120.gp, 0, '', '20g Boni wegen guter Dienste'
-j.append Entry.new 17, 'Kost & Logis', 0, -10.gp, 0, '', '1g / pro Nacht und Tag Logis, 5s / Nacht / Tag Kost'
-j.append Entry.new 17, 'Gather Information', 0, -2.gp, 0, '', 'Suche nach Gerhard Osterhagen'
+# j.append Entry.new 17, 'Kost & Logis', 0, -10.gp, 0, '', '1g / pro Nacht und Tag Logis, 5s / Nacht / Tag Kost'
+# j.append Entry.new 17, 'Gather Information', 0, -2.gp, 0, '', 'Suche nach Gerhard Osterhagen'
+# j.append Entry.new 19, 'Kost & Logis', 0, -10.gp, 0, '', '1g / pro Nacht und Tag Logis, 5s / Nacht / Tag Kost'
+# j.append Entry.new 19, 'Trinkgelder', 0, -5.sp, 0, '', 'für den Fiedler'
+# j.append Entry.new 19, 'Wirtshaus', 0, -11.gp, 0, '', 'Ein stimmungsvoller Abend mit Wein, Tanz und Gesang'
+# j.append Entry.new 19, 'Verkauf Mythrilbarren', 0, 1100.gp, 0, '', 'an Thurgrom Steinherz 10% rausgehandelt'
+# j.append Entry.new 19, 'Handel', 0, 13.gp, 0, 'Gwyn', 'Teppich verkauft und ordentliche, bequeme Reisegewandung für Gwyn'
+# j.append Entry.new 19, 'Kost & Logis', 0, -10.gp, 0, '', '1g / pro Nacht und Tag Logis, 5s / Nacht / Tag Kost'
+# j.append Entry.new 19, 'Wirtshaus', 0, -11.gp, 0, '', 'Ein stimmungsvoller Abend mit Wein, Tanz und Gesang'
+# j.append Entry.new 19, 'Kost & Logis', 0, -14.gp, 0, '', ''
+# j.append Entry.new 19, '', 0, 0.gp, 0, '', 'Anzahlung Eskorte Goldbeck->Otternburg jeder 10g in die eigene Tasche'
+# j.append Entry.new 19, '', 0, 288.gp, 0, '', 'Belohung Eskorte (#39) 48g pro Kopf'
 
 puts "<html>"
 puts "<head>"
@@ -199,3 +209,10 @@ puts "</body>"
 puts "</html>"
 
 j.close
+
+
+# Gwyns Budget
+# earn 8.gp, 'as start money'
+# pay 1.gp, 'for bolts'
+# earn 10.gp, 'for Quest#Bengar'
+# earn 10.gp, 'for Quest#Karawane Goldbeck-Otternburg'

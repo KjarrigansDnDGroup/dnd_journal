@@ -249,3 +249,75 @@
   weight: 0
   storage: ''
   comment: Suche nach Gerhard Osterhagen
+- !ruby/struct:Entry
+  session_id: 19
+  name: Kost & Logis
+  amount: 0
+  value: -1000
+  weight: 0
+  storage: ''
+  comment: 1g / pro Nacht und Tag Logis, 5s / Nacht / Tag Kost
+- !ruby/struct:Entry
+  session_id: 19
+  name: Trinkgelder
+  amount: 0
+  value: -50
+  weight: 0
+  storage: ''
+  comment: für den Fiedler
+- !ruby/struct:Entry
+  session_id: 19
+  name: Wirtshaus
+  amount: 0
+  value: -1100
+  weight: 0
+  storage: ''
+  comment: Ein stimmungsvoller Abend mit Wein, Tanz und Gesang
+- !ruby/struct:Entry
+  session_id: 19
+  name: Verkauf Mythrilbarren
+  amount: 0
+  value: 110000
+  weight: 0
+  storage: ''
+  comment: an Thurgrom Steinherz 10% rausgehandelt
+- !ruby/struct:Entry
+  session_id: 19
+  name: Handel
+  amount: 0
+  value: 1300
+  weight: 0
+  storage: Gwyn
+  comment: Teppich verkauft (#15) und ordentliche, bequeme Reisegewandung für Gwyn
+- !ruby/struct:Entry
+  session_id: 19
+  name: Kost & Logis
+  amount: 0
+  value: -1000
+  weight: 0
+  storage: ''
+  comment: 1g / pro Nacht und Tag Logis, 5s / Nacht / Tag Kost
+- !ruby/struct:Entry
+  session_id: 19
+  name: Wirtshaus
+  amount: 0
+  value: -1100
+  weight: 0
+  storage: ''
+  comment: Ein stimmungsvoller Abend mit Wein, Tanz und Gesang
+- !ruby/struct:Entry
+  session_id: 19
+  name: ''
+  amount: 0
+  value: 0
+  weight: 0
+  storage: ''
+  comment: Anzahlung Eskorte Goldbeck->Otternburg jeder 10g in die eigene Tasche
+- !ruby/struct:Entry
+  session_id: 19
+  name: ''
+  amount: 0
+  value: 28800
+  weight: 0
+  storage: ''
+  comment: Belohung Eskorte (#39) 48g pro Kopf
