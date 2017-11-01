@@ -1,4 +1,4 @@
-Entry = Struct.new :session_id, :name, :amount, :value, :weight, :storage, :comment
+Entry = Struct.new :session_id, :name, :amount, :value, :storage, :comment
 
 class Integer
   def gp
@@ -98,11 +98,17 @@ require 'yaml'
 class Journal
   def initialize
     @db = File.new('journal.db', 'a+')
-    @entries = []
+    load
   end
 
   def load
     @entries = YAML.load(@db.read)
+    @entries = [] unless @entries
+  end
+
+  def clear
+    @entries.clear
+    @db = File.new('journal.db', 'w+')
   end
 
   def append(entry)
@@ -115,9 +121,6 @@ class Journal
 
   def entries
     @entries.dup
-  end
-
-  def current_weight
   end
 
   def current_coins
@@ -153,48 +156,50 @@ class Journal
 end
 
 j = Journal.new
-j.load
-# j.append Entry.new 3, '', 0, 50.gp, 0.5, '', 'Anzahlung Quest #2 - "Kurier Mühlenberge"'
-# j.append Entry.new 3, '', 0, -50.gp, 0.5, '', 'je 10gp an die Gruppenmitglieder verteilt'
-# j.append Entry.new 3, '', 0, 143.gp, 1.43, 'Gwyn', 'Direktfund 1. Kampf mit Goblins'
-# j.append Entry.new 4, '', 0, 350.gp, 3.5, 'Gwyn', 'Direktfund 2. Kampf mit Goblins und Myrdral'
-# j.append Entry.new 4, 'Scoll of Identification', 0, -110.gp, 0, 'direkt verwendet', 'von BM in Tanne#Fähre gekauft und zur Identifikation des Erzmagierrings verwendet'
-# j.append Entry.new 5, '', 0, 100.gp, 1.0, 'Gwyn', 'Verkauf des kompletten Loot aus den beiden Goblinkämpfen an Armin in Mühlenberge'
-# j.append Entry.new 5, 'Service', 0, -1.gp, 0, '', 'Bezahlung des Händlers der uns und unseren verletzten Gefährten mitnimmt.'
-# j.append Entry.new 5, 'Light Horse', 1, -90.gp, 0, '', 'Leichtes Pferd und einen Transportsattel gekauft'
-# j.append Entry.new 6, '', 0, 75.gp, 0.75, 'Gwyn', 'Belohnung Qest #2 - "Kurier Mühlenberge"'
-# j.append Entry.new 6, 'Kost & Logis', 0, -4.gp, 0, '', ''
-# j.append Entry.new 6, 'Rations', 0, -1.gp, 0, '', ''
-# j.append Entry.new 7, 'Service', 0, -50.gp, 0, '', 'Spende an den Tempel für den Versuch Tarsos Wunde zu heilen'
-# j.append Entry.new 7, 'Service', 0, -5.gp, 0, '', 'Kurier beauftragt, den General über unser Vorhaben nach Süden zu gehen zu informieren und unser Pferd nach Otternburg zu Gwyns Eltern zu bringen.'
-# j.append Entry.new 7, 'Kost & Logis', 0, -4.gp, 0, '', ''
-# j.append Entry.new 7, 'Rations', 0, -1.gp, 0, '', ''
-# j.append Entry.new 8, 'Scale Mail', 1, -50.gp, 0, '', 'Rüstung für Tarso'
-# j.append Entry.new 8, 'Scale Mail', 1, -50.gp, 0, '', 'Rüstung für Eldgrimm'
-# j.append Entry.new 8, 'Bullseye Latern', 2, -24.gp, 0, '', 'Vorbereitung für Zwergenfestung'
-# j.append Entry.new 8, 'Chalk', 10, -1.sp, 0, '', 'Vorbereitung für Zwergenfestung'
-# j.append Entry.new 11, '', 0, 200.gp, 2.0, 'Gwyn', 'Direktfund Kampf mit Goblinoiden'
-# j.append Entry.new 12, 'Kost & Logis', 0, -6.gp, 0, '', ''
-# j.append Entry.new 14, 'Kost & Logis', 0, -6.gp, 0, '', ''
-# j.append Entry.new 15, 'Kost & Logis', 0, -6.gp, 0, '', ''
-# j.append Entry.new 15, 'Thieves Tools', 0, 0.gp, 0, 'Talin', 'Bei zwei vermeintlichen Diebsleichen gefunden'
-# j.append Entry.new 15, '', 0, 20.gp, 0, '', 'In einem Geheimversteck in der Kanalisation'
-# j.append Entry.new 15, 'Valuable Carpet', 0, 0.gp, 0, 'Zaubersack', 'In einem Geheimversteck in der Kanalisation'
-# j.append Entry.new 16, 'Ink & 5x Parchment', 0, -9.gp, 0, 'Gwyn', 'Für die Zukunft...'
-# j.append Entry.new 16, '20x Arrow', 0, -1.gp, 0, 'Talin', ''
-# j.append Entry.new 16, 'Questbelohnung', 0, 120.gp, 0, '', '20g Boni wegen guter Dienste'
-# j.append Entry.new 17, 'Kost & Logis', 0, -10.gp, 0, '', '1g / pro Nacht und Tag Logis, 5s / Nacht / Tag Kost'
-# j.append Entry.new 17, 'Gather Information', 0, -2.gp, 0, '', 'Suche nach Gerhard Osterhagen'
-# j.append Entry.new 19, 'Kost & Logis', 0, -10.gp, 0, '', '1g / pro Nacht und Tag Logis, 5s / Nacht / Tag Kost'
-# j.append Entry.new 19, 'Trinkgelder', 0, -5.sp, 0, '', 'für den Fiedler'
-# j.append Entry.new 19, 'Wirtshaus', 0, -11.gp, 0, '', 'Ein stimmungsvoller Abend mit Wein, Tanz und Gesang'
-# j.append Entry.new 19, 'Verkauf Mythrilbarren', 0, 1100.gp, 0, '', 'an Thurgrom Steinherz 10% rausgehandelt'
-# j.append Entry.new 19, 'Handel', 0, 13.gp, 0, 'Gwyn', 'Teppich verkauft und ordentliche, bequeme Reisegewandung für Gwyn'
-# j.append Entry.new 19, 'Kost & Logis', 0, -10.gp, 0, '', '1g / pro Nacht und Tag Logis, 5s / Nacht / Tag Kost'
-# j.append Entry.new 19, 'Wirtshaus', 0, -11.gp, 0, '', 'Ein stimmungsvoller Abend mit Wein, Tanz und Gesang'
-# j.append Entry.new 19, 'Kost & Logis', 0, -14.gp, 0, '', ''
-# j.append Entry.new 19, '', 0, 0.gp, 0, '', 'Anzahlung Eskorte Goldbeck->Otternburg jeder 10g in die eigene Tasche'
-# j.append Entry.new 19, '', 0, 288.gp, 0, '', 'Belohung Eskorte (#39) 48g pro Kopf'
+j.clear
+j.append Entry.new 3, '', 0, 50.gp, '', 'Anzahlung Quest #2 - "Kurier Mühlenberge"'
+j.append Entry.new 3, '', 0, -50.gp, '', 'je 10gp an die Gruppenmitglieder verteilt'
+j.append Entry.new 3, '', 0, 143.gp, 'Gwyn', 'Direktfund 1. Kampf mit Goblins'
+j.append Entry.new 4, '', 0, 350.gp, 'Gwyn', 'Direktfund 2. Kampf mit Goblins und Myrdral'
+j.append Entry.new 4, 'Scoll of Identification', 0, -110.gp, 'direkt verwendet', 'von BM in Tanne#Fähre gekauft und zur Identifikation des Erzmagierrings verwendet'
+j.append Entry.new 5, '', 0, 100.gp, 'Gwyn', 'Verkauf des kompletten Loot aus den beiden Goblinkämpfen an Armin in Mühlenberge'
+j.append Entry.new 5, 'Service', 0, -1.gp, '', 'Bezahlung des Händlers der uns und unseren verletzten Gefährten mitnimmt.'
+j.append Entry.new 5, 'Light Horse', 1, -90.gp, '', 'Leichtes Pferd und einen Transportsattel gekauft'
+j.append Entry.new 6, '', 0, 75.gp, 'Gwyn', 'Belohnung Qest #2 - "Kurier Mühlenberge"'
+j.append Entry.new 6, 'Kost & Logis', 0, -4.gp, '', ''
+j.append Entry.new 6, 'Rations', 0, -1.gp, '', ''
+j.append Entry.new 7, 'Service', 0, -50.gp, '', 'Spende an den Tempel für den Versuch Tarsos Wunde zu heilen'
+j.append Entry.new 7, 'Service', 0, -5.gp, '', 'Kurier beauftragt, den General über unser Vorhaben nach Süden zu gehen zu informieren und unser Pferd nach Otternburg zu Gwyns Eltern zu bringen.'
+j.append Entry.new 7, 'Kost & Logis', 0, -4.gp, '', ''
+j.append Entry.new 7, 'Rations', 0, -1.gp, '', ''
+j.append Entry.new 8, 'Scale Mail', 1, -50.gp, '', 'Rüstung für Tarso'
+j.append Entry.new 8, 'Scale Mail', 1, -50.gp, '', 'Rüstung für Eldgrimm'
+j.append Entry.new 8, 'Bullseye Latern', 2, -24.gp, '', 'Vorbereitung für Zwergenfestung'
+j.append Entry.new 8, 'Chalk', 10, -1.sp, '', 'Vorbereitung für Zwergenfestung'
+j.append Entry.new 11, '', 0, 200.gp, 'Gwyn', 'Direktfund Kampf mit Goblinoiden'
+j.append Entry.new 12, 'Kost & Logis', 0, -6.gp, '', ''
+j.append Entry.new 14, 'Kost & Logis', 0, -6.gp, '', ''
+j.append Entry.new 15, 'Kost & Logis', 0, -6.gp, '', ''
+j.append Entry.new 15, 'Thieves Tools', 0, 0.gp, 'Talin', 'Bei zwei vermeintlichen Diebsleichen gefunden'
+j.append Entry.new 15, '', 0, 20.gp, '', 'In einem Geheimversteck in der Kanalisation'
+j.append Entry.new 15, 'Valuable Carpet', 0, 0.gp, 'Zaubersack', 'In einem Geheimversteck in der Kanalisation'
+j.append Entry.new 16, 'Ink & 5x Parchment', 0, -9.gp, 'Gwyn', 'Für die Zukunft...'
+j.append Entry.new 16, '20x Arrow', 0, -1.gp, 'Talin', ''
+j.append Entry.new 16, 'Questbelohnung', 0, 120.gp, '', '20g Boni wegen guter Dienste'
+j.append Entry.new 17, 'Kost & Logis', 0, -10.gp, '', '1g / pro Nacht und Tag Logis, 5s / Nacht / Tag Kost'
+j.append Entry.new 17, 'Gather Information', 0, -2.gp, '', 'Suche nach Gerhard Osterhagen'
+j.append Entry.new 19, 'Kost & Logis', 0, -10.gp, '', '1g / pro Nacht und Tag Logis, 5s / Nacht / Tag Kost'
+j.append Entry.new 19, 'Trinkgelder', 0, -5.sp, '', 'für den Fiedler'
+j.append Entry.new 19, 'Wirtshaus', 0, -11.gp, '', 'Ein stimmungsvoller Abend mit Wein, Tanz und Gesang'
+j.append Entry.new 19, 'Verkauf Mythrilbarren', 0, 1100.gp, '', 'an Thurgrom Steinherz 10% rausgehandelt'
+j.append Entry.new 19, 'Handel', 0, 13.gp, 'Gwyn', 'Teppich verkauft (siehe Abend #15 / Lfd. 26) und ordentliche, bequeme Reisegewandung für Gwyn'
+j.append Entry.new 19, 'Kost & Logis', 0, -10.gp, '', '1g / pro Nacht und Tag Logis, 5s / Nacht / Tag Kost'
+j.append Entry.new 19, 'Wirtshaus', 0, -11.gp, '', 'Ein stimmungsvoller Abend mit Wein, Tanz und Gesang'
+j.append Entry.new 19, 'Kost & Logis', 0, -14.gp, '', ''
+j.append Entry.new 19, '', 0, 0.gp, '', 'Anzahlung Eskorte Goldbeck->Otternburg jeder 10g in die eigene Tasche'
+j.append Entry.new 19, '', 0, 288.gp, '', 'Belohung Eskorte (#39) 48g pro Kopf'
+j.append Entry.new 21, 'Battleaxe (Masterwork)', 0, -310.gp,  'Talin', 'Shoppingtour'
+j.append Entry.new 23, 'Karnival Teil 1', 0, -265.gp, '', 'Wir hatten einen spannenden Tag (Details siehe Abend #23)'
 
 puts "<html>"
 puts "<head>"
@@ -203,7 +208,6 @@ puts "</head>"
 puts "<body>"
 puts "<h1>Finanzbuchhaltung</h1>"
 puts "<h2>Aktueller Kontostand - #{j.current_coins}</h2>"
-puts "<h2>Aktuelles Transportgewicht - #{j.current_weight}</h2>"
 puts j.export_as_html(reverse: true) # Show latest first
 puts "</body>"
 puts "</html>"

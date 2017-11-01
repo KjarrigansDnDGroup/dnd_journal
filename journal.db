@@ -4,7 +4,6 @@
   name: ''
   amount: 0
   value: 5000
-  weight: 0.5
   storage: ''
   comment: 'Anzahlung Quest #2 - "Kurier Mühlenberge"'
 - !ruby/struct:Entry
@@ -12,7 +11,6 @@
   name: ''
   amount: 0
   value: -5000
-  weight: 0.5
   storage: ''
   comment: je 10gp an die Gruppenmitglieder verteilt
 - !ruby/struct:Entry
@@ -20,7 +18,6 @@
   name: ''
   amount: 0
   value: 14300
-  weight: 1.43
   storage: Gwyn
   comment: Direktfund 1. Kampf mit Goblins
 - !ruby/struct:Entry
@@ -28,7 +25,6 @@
   name: ''
   amount: 0
   value: 35000
-  weight: 3.5
   storage: Gwyn
   comment: Direktfund 2. Kampf mit Goblins und Myrdral
 - !ruby/struct:Entry
@@ -36,7 +32,6 @@
   name: Scoll of Identification
   amount: 0
   value: -11000
-  weight: 0
   storage: direkt verwendet
   comment: von BM in Tanne#Fähre gekauft und zur Identifikation des Erzmagierrings
     verwendet
@@ -45,7 +40,6 @@
   name: ''
   amount: 0
   value: 10000
-  weight: 1.0
   storage: Gwyn
   comment: Verkauf des kompletten Loot aus den beiden Goblinkämpfen an Armin in Mühlenberge
 - !ruby/struct:Entry
@@ -53,7 +47,6 @@
   name: Service
   amount: 0
   value: -100
-  weight: 0
   storage: ''
   comment: Bezahlung des Händlers der uns und unseren verletzten Gefährten mitnimmt.
 - !ruby/struct:Entry
@@ -61,7 +54,6 @@
   name: Light Horse
   amount: 1
   value: -9000
-  weight: 0
   storage: ''
   comment: Leichtes Pferd und einen Transportsattel gekauft
 - !ruby/struct:Entry
@@ -69,7 +61,6 @@
   name: ''
   amount: 0
   value: 7500
-  weight: 0.75
   storage: Gwyn
   comment: 'Belohnung Qest #2 - "Kurier Mühlenberge"'
 - !ruby/struct:Entry
@@ -77,7 +68,6 @@
   name: Kost & Logis
   amount: 0
   value: -400
-  weight: 0
   storage: ''
   comment: ''
 - !ruby/struct:Entry
@@ -85,7 +75,6 @@
   name: Rations
   amount: 0
   value: -100
-  weight: 0
   storage: ''
   comment: ''
 - !ruby/struct:Entry
@@ -93,7 +82,6 @@
   name: Service
   amount: 0
   value: -5000
-  weight: 0
   storage: ''
   comment: Spende an den Tempel für den Versuch Tarsos Wunde zu heilen
 - !ruby/struct:Entry
@@ -101,7 +89,6 @@
   name: Service
   amount: 0
   value: -500
-  weight: 0
   storage: ''
   comment: Kurier beauftragt, den General über unser Vorhaben nach Süden zu gehen
     zu informieren und unser Pferd nach Otternburg zu Gwyns Eltern zu bringen.
@@ -110,7 +97,6 @@
   name: Kost & Logis
   amount: 0
   value: -400
-  weight: 0
   storage: ''
   comment: ''
 - !ruby/struct:Entry
@@ -118,7 +104,6 @@
   name: Rations
   amount: 0
   value: -100
-  weight: 0
   storage: ''
   comment: ''
 - !ruby/struct:Entry
@@ -126,7 +111,6 @@
   name: Scale Mail
   amount: 1
   value: -5000
-  weight: 0
   storage: ''
   comment: Rüstung für Tarso
 - !ruby/struct:Entry
@@ -134,7 +118,6 @@
   name: Scale Mail
   amount: 1
   value: -5000
-  weight: 0
   storage: ''
   comment: Rüstung für Eldgrimm
 - !ruby/struct:Entry
@@ -142,7 +125,6 @@
   name: Bullseye Latern
   amount: 2
   value: -2400
-  weight: 0
   storage: ''
   comment: Vorbereitung für Zwergenfestung
 - !ruby/struct:Entry
@@ -150,7 +132,6 @@
   name: Chalk
   amount: 10
   value: -10
-  weight: 0
   storage: ''
   comment: Vorbereitung für Zwergenfestung
 - !ruby/struct:Entry
@@ -158,7 +139,6 @@
   name: ''
   amount: 0
   value: 20000
-  weight: 2.0
   storage: Gwyn
   comment: Direktfund Kampf mit Goblinoiden
 - !ruby/struct:Entry
@@ -166,7 +146,6 @@
   name: Kost & Logis
   amount: 0
   value: -600
-  weight: 0
   storage: ''
   comment: ''
 - !ruby/struct:Entry
@@ -174,7 +153,6 @@
   name: Kost & Logis
   amount: 0
   value: -600
-  weight: 0
   storage: ''
   comment: ''
 - !ruby/struct:Entry
@@ -182,7 +160,6 @@
   name: Kost & Logis
   amount: 0
   value: -600
-  weight: 0
   storage: ''
   comment: ''
 - !ruby/struct:Entry
@@ -190,7 +167,6 @@
   name: Thieves Tools
   amount: 0
   value: 0
-  weight: 0
   storage: Talin
   comment: Bei zwei vermeintlichen Diebsleichen gefunden
 - !ruby/struct:Entry
@@ -198,7 +174,6 @@
   name: ''
   amount: 0
   value: 2000
-  weight: 0
   storage: ''
   comment: In einem Geheimversteck in der Kanalisation
 - !ruby/struct:Entry
@@ -206,7 +181,6 @@
   name: Valuable Carpet
   amount: 0
   value: 0
-  weight: 0
   storage: Zaubersack
   comment: In einem Geheimversteck in der Kanalisation
 - !ruby/struct:Entry
@@ -214,7 +188,6 @@
   name: Ink & 5x Parchment
   amount: 0
   value: -900
-  weight: 0
   storage: Gwyn
   comment: Für die Zukunft...
 - !ruby/struct:Entry
@@ -222,7 +195,6 @@
   name: 20x Arrow
   amount: 0
   value: -100
-  weight: 0
   storage: Talin
   comment: ''
 - !ruby/struct:Entry
@@ -230,7 +202,6 @@
   name: Questbelohnung
   amount: 0
   value: 12000
-  weight: 0
   storage: ''
   comment: 20g Boni wegen guter Dienste
 - !ruby/struct:Entry
@@ -238,7 +209,6 @@
   name: Kost & Logis
   amount: 0
   value: -1000
-  weight: 0
   storage: ''
   comment: 1g / pro Nacht und Tag Logis, 5s / Nacht / Tag Kost
 - !ruby/struct:Entry
@@ -246,7 +216,6 @@
   name: Gather Information
   amount: 0
   value: -200
-  weight: 0
   storage: ''
   comment: Suche nach Gerhard Osterhagen
 - !ruby/struct:Entry
@@ -254,7 +223,6 @@
   name: Kost & Logis
   amount: 0
   value: -1000
-  weight: 0
   storage: ''
   comment: 1g / pro Nacht und Tag Logis, 5s / Nacht / Tag Kost
 - !ruby/struct:Entry
@@ -262,7 +230,6 @@
   name: Trinkgelder
   amount: 0
   value: -50
-  weight: 0
   storage: ''
   comment: für den Fiedler
 - !ruby/struct:Entry
@@ -270,7 +237,6 @@
   name: Wirtshaus
   amount: 0
   value: -1100
-  weight: 0
   storage: ''
   comment: Ein stimmungsvoller Abend mit Wein, Tanz und Gesang
 - !ruby/struct:Entry
@@ -278,7 +244,6 @@
   name: Verkauf Mythrilbarren
   amount: 0
   value: 110000
-  weight: 0
   storage: ''
   comment: an Thurgrom Steinherz 10% rausgehandelt
 - !ruby/struct:Entry
@@ -286,15 +251,14 @@
   name: Handel
   amount: 0
   value: 1300
-  weight: 0
   storage: Gwyn
-  comment: Teppich verkauft (#15) und ordentliche, bequeme Reisegewandung für Gwyn
+  comment: 'Teppich verkauft (siehe Abend #15 / Lfd. 26) und ordentliche, bequeme
+    Reisegewandung für Gwyn'
 - !ruby/struct:Entry
   session_id: 19
   name: Kost & Logis
   amount: 0
   value: -1000
-  weight: 0
   storage: ''
   comment: 1g / pro Nacht und Tag Logis, 5s / Nacht / Tag Kost
 - !ruby/struct:Entry
@@ -302,15 +266,20 @@
   name: Wirtshaus
   amount: 0
   value: -1100
-  weight: 0
   storage: ''
   comment: Ein stimmungsvoller Abend mit Wein, Tanz und Gesang
+- !ruby/struct:Entry
+  session_id: 19
+  name: Kost & Logis
+  amount: 0
+  value: -1400
+  storage: ''
+  comment: ''
 - !ruby/struct:Entry
   session_id: 19
   name: ''
   amount: 0
   value: 0
-  weight: 0
   storage: ''
   comment: Anzahlung Eskorte Goldbeck->Otternburg jeder 10g in die eigene Tasche
 - !ruby/struct:Entry
@@ -318,6 +287,19 @@
   name: ''
   amount: 0
   value: 28800
-  weight: 0
   storage: ''
   comment: Belohung Eskorte (#39) 48g pro Kopf
+- !ruby/struct:Entry
+  session_id: 21
+  name: Battleaxe (Masterwork)
+  amount: 0
+  value: -31000
+  storage: Talin
+  comment: Shoppingtour
+- !ruby/struct:Entry
+  session_id: 23
+  name: Karnival Teil 1
+  amount: 0
+  value: -26500
+  storage: ''
+  comment: 'Wir hatten einen spannenden Tag (Details siehe Abend #23)'
