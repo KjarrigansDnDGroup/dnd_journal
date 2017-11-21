@@ -200,6 +200,8 @@ j.append Entry.new 19, '', 0, 0.gp, '', 'Anzahlung Eskorte Goldbeck->Otternburg 
 j.append Entry.new 19, '', 0, 288.gp, '', 'Belohung Eskorte (#39) 48g pro Kopf'
 j.append Entry.new 21, 'Battleaxe (Masterwork)', 0, -310.gp,  'Talin', 'Shoppingtour'
 j.append Entry.new 23, 'Karnival Teil 1', 0, -265.gp, '', 'Wir hatten einen spannenden Tag (Details siehe Abend #23)'
+j.append Entry.new 23, 'Identify', 0, -100.gp, '', 'Gwyn identifiziert die magische Lampe aus dem Turm'
+j.append Entry.new 23, 'Karnival Teil 2', 0, 410.gp, '', 'Wir hatten einen spannenden Tag (Details siehe Abend #24)'
 
 puts "<html>"
 puts "<head>"

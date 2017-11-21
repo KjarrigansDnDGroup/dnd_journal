@@ -303,3 +303,17 @@
   value: -26500
   storage: ''
   comment: 'Wir hatten einen spannenden Tag (Details siehe Abend #23)'
+- !ruby/struct:Entry
+  session_id: 23
+  name: Identify
+  amount: 0
+  value: -10000
+  storage: ''
+  comment: Gwyn identifiziert die magische Lampe aus dem Turm
+- !ruby/struct:Entry
+  session_id: 23
+  name: Karnival Teil 2
+  amount: 0
+  value: 41000
+  storage: ''
+  comment: 'Wir hatten einen spannenden Tag (Details siehe Abend #24)'
